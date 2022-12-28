@@ -1,5 +1,5 @@
 import test
-import  os
+import os
 
 ROOT = os.path.dirname(os.getcwd())
 TEST_PATH = ROOT+"/data"

@@ -10,6 +10,7 @@ BATCH_SIZE = 64
 sports = ["Basketball", "Football", "Rowing", "Swimming", "Tennis", "Yoga"]
 CLASS_COUNT = len(sports)
 
+output_dir = ROOT + "/output/"
 
 class Test:
     data = None
@@ -43,4 +44,4 @@ class Test:
             self.__save_to_csv(pred_list)
 
     def __save_to_csv(self, pred_list):
-        np.savetxt('predictions.csv', pred_list, fmt='%s')
+        np.savetxt(f'{output_dir}\\predictions{len(os.listdir(output_dir)) + 1}.csv', pred_list, fmt='%s')
